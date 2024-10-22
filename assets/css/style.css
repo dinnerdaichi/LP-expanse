@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+
+
+div {
+  margin-bottom: 0;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  margin-bottom: -6px;
+  text-align: center;
+  position: relative;
+}
+
+
+
+img {
+  margin: -3px;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer img{
+  margin: -6px;
+}
+
+/* button */
+
+.btn__reserve {
+  position: absolute;
+  bottom: 1.3%;
+  left: 0;
+
+}
+
+.btn__reserve.middle {
+  position: absolute;
+  bottom: 1%;
+  left: 0;
+}
+
+.btn__reserve.bottom {
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+
+}
+
+
+.btn__web.top {
+  position: absolute;
+  bottom: 75.4%;
+  left: 0;
+}
+
+.btn__web.middle {
+  position: absolute;
+  bottom: 44.4%;
+  left: 0;
+}
+
+.btn__web.bottom {
+  position: absolute;
+  bottom: 12.4%;
+  left: 0;
+}
+
+
+.btn__float{
+  position: fixed;
+  bottom: 0;
+  right: 10%;
+  width: 300px;
+  z-index: 999;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 480px) {
+.btn__float {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.btn__float.show{
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  opacity: 1;
+}
+
+
+/* google-map */
+
+.google-map__wrap.top{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 79%;
+  height: 9%;
+  /* max-width: 590px; */
+  aspect-ratio: 16 / 9;
+  /* width: 590px;
+  height: 295px; */
+}
+
+.google-map__wrap.top iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.google-map__wrap.middle{
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 79%;
+  height: 9%;
+  /* max-width: 590px; */
+  aspect-ratio: 16 / 9;
+  /* width: 590px;
+  height: 295px; */
+}
+
+.google-map__wrap.middle iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.google-map__wrap.bottom{
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 79%;
+  height: 9%;
+  /* max-width: 590px; */
+  aspect-ratio: 16 / 9;
+  /* width: 590px;
+  height: 295px; */
+}
+
+.google-map__wrap.bottom iframe{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*アニメーション*/
+.animation {
+  animation: fuwafuwa 2s linear infinite;
+  scale: 1;
+}
+
+@keyframes fuwafuwa {
+  0% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-10px)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}

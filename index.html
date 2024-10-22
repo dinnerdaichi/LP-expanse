@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="assets/css/reset.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+
+
+  <header>
+
+    <h1>
+      <img src="./assets/img/01.png" alt="東京NO1のアーユルベーダサロン">
+      <a class="btn__reserve animation" href="#">
+        <img src="./assets/img/btn_reserve.png" alt="予約ボタン">
+      </a>
+    </h1>
+  </header>
+
+  <main>
+
+    <div class="btn__float">
+      <a href="">
+        <img src="./assets/img/btn_float.png" alt="浮き出る予約ボタン">
+      </a>
+    </div>
+
+    <div><img src="./assets/img/02.jpg" alt="画像2"></div>
+    <div><img src="./assets/img/03.png" alt="画像3">
+
+    </div>
+    <div><img src="./assets/img/04.png" alt="画像4"></div>
+    <div><img src="./assets/img/05.jpg" alt="画像5"></div>
+    <div><img src="./assets/img/06.png" alt="画像6">
+      <a class="btn__reserve middle animation" href="#">
+        <img src="./assets/img/btn_reserve.png" alt="予約ボタン">
+      </a>
+    </div>
+    <div><img src="./assets/img/07.png" alt="画像7">
+
+      <a class="btn__web top" href="#">
+        <img src="./assets/img/btn_web.png" alt="店舗web予約ボタン">
+      </a>
+      <div class="google-map__wrap top"><iframe class="google-map top" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.255712571391!2d139.70863237571638!3d35.64607097259859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b400369a599%3A0x4da44229ed88da7b!2z44Kv44Kk44K65oG15q-U5a-_!5e0!3m2!1sja!2sjp!4v1729582902614!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+      <a class="btn__web middle" href="#">
+        <img src="./assets/img/btn_web.png" alt="店舗web予約ボタン">
+      </a>
+
+      <div class="google-map__wrap middle"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.506281634409!2d139.7064261284502!3d35.72701524631749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d7d5276fb07%3A0xfff3bb46f3b74eb2!2z5Y2X5rGg6KKLSS1O44OT44Or!5e0!3m2!1sja!2sjp!4v1729584739470!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+
+      <a class="btn__web bottom" href="#">
+        <img src="./assets/img/btn_web.png" alt="店舗web予約ボタン">
+      </a>
+
+      <div class="google-map__wrap bottom"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.346056261207!2d139.75991107571733!3d35.66848017259138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be8807e3a05%3A0xe724f4f8faf16478!2z44CSMTA0LTAwNjEg5p2x5Lqs6YO95Lit5aSu5Yy66YqA5bqn77yX5LiB55uu77yZ4oiS77yR77yRIOODouODs-ODluODqeODs-mKgOW6p-ODk-ODqyA46ZqO!5e0!3m2!1sja!2sjp!4v1729584874578!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+    </div>
+
+
+    <div><img src="./assets/img/08.jpg" alt="画像8">
+      <a class="btn__reserve bottom animation" href="#">
+        <img src="./assets/img/btn_reserve.png" alt="予約ボタン">
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div><img src="./assets/img/09.png" alt="予約ボタン"></div>
+
+  </footer>
+
+  <script src="./assets/js/script,.js"></script>
+  <script>
+  document.body.style.display = 'none';
+  window.onload = function () {
+    var UserInput = null;
+
+    var cookies = document.cookie;
+    var cookiesArray = cookies.split(';');
+    var pass = 'cGFzcw==';
+
+    for (var c of cookiesArray) {
+      var cArray = c.split('=');
+      if (cArray[0].indexOf('cruw-basic') > -1) {
+        UserInput = decodeURIComponent(cArray[1]);
+      }
+    }
+    if (!(UserInput && UserInput == window.atob(pass))) {
+      UserInput = prompt("パスワードを入力して下さい:", "");
+    }
+
+    if (UserInput != window.atob(pass)) {
+      document.body.innerHTML = "403 Forbidden";
+    } else {
+      var now = new Date();
+      now.setMinutes(now.getMinutes() + 60 * 24 * 3);
+      document.cookie = "cruw-basic=" + encodeURIComponent(UserInput) + ";expires=" + now.toUTCString() + "; path=/;";
+    }
+    document.body.style.display = null;
+  }
+</script>
+</body>
+
+
+
+
+
+</html>
