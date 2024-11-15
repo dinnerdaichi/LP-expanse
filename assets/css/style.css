@@ -85,7 +85,7 @@ footer img{
   position: fixed;
   bottom: 0;
   right: 10%;
-  width: 300px;
+  width: 450px;
   z-index: 999;
   opacity: 0;
   transition: all 0.5s;
